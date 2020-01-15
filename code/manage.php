@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv = "Content-Type" conteng = "text/html;charset = utf-8">
-        <title>借书证管理系统</title>
+        <title>Borrow System</title>
         <style>        
         span{
         color:blue;
@@ -11,36 +11,36 @@
     </head>
     <body>
     <div class=\"tip\">
-        <input type="button" value="返回" onclick="javascript:window.location='turn.php'">
+        <input type="button" value="return" onclick="javascript:window.location='turn.php'">
     </div>
-    <h1>借书证管理系统</h1>
+    <h1>Borrow System</h1>
     <div class="wh">
 
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <fieldset>
-                <legend><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账号加减&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></legend>
+                <legend><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add and delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2></legend>
                 <table align="center">
                     <tr>
-                        <td>卡号：</td>
+                        <td>Card ID</td>
                         <td><input type="text" name="cno"/></td>
                     </tr>
                     <tr>
-                        <td>姓名：</td>
+                        <td>Name</td>
                         <td><input type="text" name="name"/></td>
                     </tr>
                     <tr>
-                        <td>部门（系）：</td>
+                        <td>Department</td>
                         <td><input type="text" name="depart"/></td>
                     </tr>
                     <tr>
-                        <td>类型：</td>
+                        <td>Category</td>
                         <td><input type="text" name="type"/></td>
                     </tr>
                     <tr>
                         <td><input type="radio" name="op" value="add"></td>
-                        <td>增加</td>
+                        <td>Add</td>
                         <td><input type="radio" name="op" value="sub"></td>
-                        <td>删除</td>
+                        <td>Delete</td>
                         <td><input type="submit" value="确定"></td>
                     </tr>
                 </table>

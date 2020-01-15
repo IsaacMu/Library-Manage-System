@@ -13,7 +13,7 @@
     $outcome1=mysqli_query($online,$sel1);
 
     if(mysqli_num_rows($outcome1)==0) {
-        echo '<script type="text/javascript"> alert("没有借书记录"); window.location=' . '\'' . 'Borrow&return_UI.php' . '\'' . '</script>';
+        echo '<script type="text/javascript"> alert("No record"); window.location=' . '\'' . 'Borrow&return_UI.php' . '\'' . '</script>';
         exit();
     }
     else{
@@ -39,7 +39,7 @@
             }
         }
         mysqli_close($online);
-        echo '<script type="text/javascript"> alert("图书归还成功"); window.location='.'\''.'Borrow&return_UI.php'.'\''.'</script>';
+        echo '<script type="text/javascript"> alert("Return Success"); window.location='.'\''.'Borrow&return_UI.php'.'\''.'</script>';
         exit();
     }
 

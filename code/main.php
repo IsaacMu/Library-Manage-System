@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv = "Content-Type" conteng = "text/html;charset = utf-8">
-        <title>图书管理系统</title>
+        <title>Library System</title>
         <style>        
         span{
         color:blue;
@@ -10,15 +10,15 @@
         </style>
     </head>
     <body><center>
-        <h1>图书管理系统</h1>
+        <h1>Library System</h1>
         <form method="post" action="signup.php">
-            <label for = "username">用户名：</label>
+            <label for = "username">User</label>
             <input type = "text" name = "username" id = "username" value="" /><br />
-            <label for = "pass">密码：</label>
+            <label for = "pass">Password</label>
             <input type = "password" name = "pass" id = "pass" value="" />
             <br />
-            <input type="submit" value="确定"  name="submit" />&nbsp;&nbsp;
-            <input type="reset" value="重置" name="reset" />
+            <input type="submit" value="submit"  name="submit" />&nbsp;&nbsp;
+            <input type="reset" value="reset" name="reset" />
         </form>
         </center>
     </body>

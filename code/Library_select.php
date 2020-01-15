@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <title>图书信息管理系统</title>
+    <title>Library System</title>
     <meta charset="UTF-8"/>
     <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery
 /jquery-1.4.min.js"></script>
@@ -9,7 +9,7 @@
 </head>
 <body >
 <div class=\"tip\">
-    <input type="button" value="返回" onclick="javascript:window.location='Borrow&return_UI.php'">
+    <input type="button" value="return" onclick="javascript:window.location='Borrow&return_UI.php'">
 </div>
 <?php
 
@@ -22,17 +22,17 @@ echo mysqli_error($online);
 
 
 echo'<table align = "center" border = "1" width = "1300" style="text-align: center;">';
-echo "<caption style=\"height:120px;\"><h1>$_GET[cno]已借阅图书</h1></caption>";
+echo "<caption style=\"height:120px;\"><h1>$_GET[cno]book name</h1></caption>";
 echo "<tr class=\"bg\">";
-echo "<td>"."书号"."</td>";
-echo "<td>"."类别"."</td>";
-echo "<td>"."书名"."</td>";
-echo "<td>"."出版社"."</td>";
-echo "<td>"."作者"."</td>";
-echo "<td>"."年份"."</td>";
-echo "<td>"."单价"."</td>";
-echo "<td>"."总藏书量"."</td>";
-echo "<td>"."库存"."</td>";
+echo "<td>"."Book ID"."</td>";
+echo "<td>"."Category"."</td>";
+echo "<td>"."Title"."</td>";
+echo "<td>"."Publisher"."</td>";
+echo "<td>"."Author"."</td>";
+echo "<td>"."Year"."</td>";
+echo "<td>"."Price"."</td>";
+echo "<td>"."Total Amount"."</td>";
+echo "<td>"."Current Amount"."</td>";
 echo "</tr>";
 $class=2;
 while($sql = mysqli_fetch_array($outcome))

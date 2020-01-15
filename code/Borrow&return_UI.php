@@ -1,7 +1,7 @@
 
 <html>
 <head>
-	<title>图书借还</title>
+	<title>Return</title>
 	<meta charset="UTF-8"  />
 <script type="text/javascript">
 </script>
@@ -29,26 +29,26 @@ td.input
 </head>
 <body>
 <div class=\"tip\">
-    <input type="button" value="返回" onclick="javascript:window.location='turn.php'">
+    <input type="button" value="return" onclick="javascript:window.location='turn.php'">
 </div>
 <div class="wh">
     <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <fieldset>
-            <legend><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图书借还&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></legend>
+            <legend><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return book&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></legend>
             <table align="center">
                 <tr>
-                    <td>卡号：</td>
+                    <td>Card ID</td>
                     <td><input type="text" name="cno"/></td>
                 </tr>
                 <tr>
-                    <td>书号：</td>
+                    <td>Book ID</td>
                     <td><input type="text" name="bno"/></td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="op" value="br">借书</td>
-                    <td><input type="radio" name="op" value="re">还书</td>
-                    <td><input type="radio" name="op" value="sl">查询</td>
-                    <td><input type="submit" value="确定"></td>
+                    <td><input type="radio" name="op" value="br">Borrow</td>
+                    <td><input type="radio" name="op" value="re">Return</td>
+                    <td><input type="radio" name="op" value="sl">Search</td>
+                    <td><input type="submit" value="submit"></td>
                 </tr>
             </table>
         </fieldset>
@@ -84,7 +84,7 @@ $b=0;
         }
 
         if ($a != 2) {
-            echo '<script type="text/javascript"> alert("借书证不存在"); window.location=' . '\'' . 'Borrow&return_UI.php' . '\'' . ' </script>';
+            echo '<script type="text/javascript"> alert("No Card"); window.location=' . '\'' . 'Borrow&return_UI.php' . '\'' . ' </script>';
         }
         else if($_POST["op"]=="sl")
             echo '<script type="text/javascript"> window.location.href=' . '\'' . 'Library_select.php?cno=' . $sql1['cno'] .  '\'' . ' </script>';
@@ -101,7 +101,7 @@ $b=0;
                     exit();
                 }
             }
-            if ($b == 1) echo '<script type="text/javascript"> alert("书籍不存在"); window.location=' . '\'' . 'Borrow&return_UI.php' . '\'' . ' </script>';
+            if ($b == 1) echo '<script type="text/javascript"> alert("No book"); window.location=' . '\'' . 'Borrow&return_UI.php' . '\'' . ' </script>';
             
         }
 

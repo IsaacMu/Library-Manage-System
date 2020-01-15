@@ -1,6 +1,6 @@
 <?php
 	
-	$online = mysqli_connect("localhost","root","xyc19960420");
+	$online = mysqli_connect("localhost","root","");
 	echo "<meta charset='utf-8' />";
 	header("Content-type:text/html;charset:utf-8");
 	mysqli_select_db($online,"library");
